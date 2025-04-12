@@ -43,23 +43,33 @@ public class PlayerManager : MonoBehaviour
         switch (playerAnimationType)
         {
             case PlayerAnimationType.DANCE:
-                _playerAnimator.SetTrigger(AnimationTriggerKey.DanceTrigger);
+                _playerAnimator.SetTrigger(AnimationActiveKey.DanceTrigger);
                 break;
             case PlayerAnimationType.WAVE:
-                _playerAnimator.SetTrigger(AnimationTriggerKey.WaveTrigger);
+                _playerAnimator.SetTrigger(AnimationActiveKey.WaveTrigger);
                 break;
             case PlayerAnimationType.YES:
-                _playerAnimator.SetTrigger(AnimationTriggerKey.YesTrigger);
+                _playerAnimator.SetTrigger(AnimationActiveKey.YesTrigger);
                 break;
             case PlayerAnimationType.NO:
-                _playerAnimator.SetTrigger(AnimationTriggerKey.NoTrigger);
+                _playerAnimator.SetTrigger(AnimationActiveKey.NoTrigger);
+                break;
+        }
+    }
+    
+    public void PlayAnimation(PlayerAnimationType playerAnimationType, bool isActive)
+    {
+        switch (playerAnimationType)
+        {
+            case PlayerAnimationType.RUNNING:
+                _playerAnimator.SetBool(AnimationActiveKey.RunningActive, isActive);
                 break;
         }
     }
 
     public void PlayerAttack()
     {
-        _playerAnimator.SetTrigger(AnimationTriggerKey.AttackTrigger);
+        _playerAnimator.SetTrigger(AnimationActiveKey.AttackTrigger);
     }
 
     public void LoadPlayerData()
@@ -77,11 +87,12 @@ public enum PlayerAnimationType
     NO,
 }
 
-public class AnimationTriggerKey
+public class AnimationActiveKey
 {
     public static string AttackTrigger = "isAttack";
     public static string WaveTrigger = "isWave";
     public static string DanceTrigger = "isDance";
     public static string NoTrigger = "isNo";
     public static string YesTrigger = "isYes";
+    public static string RunningActive = "isRunning";
 }

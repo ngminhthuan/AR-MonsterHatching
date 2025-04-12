@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="ParkID" size="5.000000 3.749026" />
+    <ImageTarget name="photo_2025-04-12_12-29-54" size="5.000000 2.808594" />
     <ImageTarget name="BackID" size="2.000000 1.499610" />
     <ImageTarget name="FrontID" size="5.000000 3.749026" />
     <ImageTarget name="Wallet" size="5.000000 3.749026" />

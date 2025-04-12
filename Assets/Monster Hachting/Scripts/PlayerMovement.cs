@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement : APlayerComponent
 {
-    public Rigidbody rb;
-    public float moveSpeed = 0.02f;
+    public GameObject robots;
+    public float moveSpeed = 2f;
     public Joystick joystick;
     public float rotationSpeed = 5f;
 
@@ -18,16 +18,17 @@ public class PlayerMovement : APlayerComponent
 
     void HandleMovement()
     {
-        Vector3 moveDirection = new Vector3(joystick.Horizontal, 0, joystick.Vertical);
+        Vector3 moveDirection = new Vector3(joystick.Horizontal, joystick.Vertical, 0);
 
-       /* if (moveDirection.magnitude > 0.1f) // Only move if joystick is pushed
+        if (moveDirection.magnitude > 0.1f)
         {
-            rb.velocity = moveDirection * moveSpeed;
+            robots.transform.position += moveDirection.normalized * moveSpeed * Time.deltaTime;
+            PlayerManager.Instance.PlayAnimation(PlayerAnimationType.RUNNING, true);
         }
         else
         {
-            rb.velocity = Vector3.zero; // Stop movement when joystick is idle
-        }*/
+            PlayerManager.Instance.PlayAnimation(PlayerAnimationType.RUNNING, false);
+        }
     }
 
     void HandleRotation()

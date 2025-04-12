@@ -4,9 +4,15 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Monster Hachting/Scenes/GamePlay.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f4d7d63c0bbf52c4f9402c17fecc1b7c, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 086be383f9082ce48867e259088029c9, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 7d25e0a5ba4638a4b9b8588a891535fb, type: 2}
+    com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: dd9e3313e83bf15488b39cc1ea0ad9f9, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3c1c68c4bfef17142b8d4963efde5263, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 86d4d37dfb7a18b419bd45d2f0bf59b6, type: 2}
+    xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: 65b9fb03814df9b4d8fec667a6aa6683, type: 2}

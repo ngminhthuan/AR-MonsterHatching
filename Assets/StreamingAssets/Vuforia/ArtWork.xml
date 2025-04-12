@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="BackID" size="2.000000 1.499610" />
+    <ImageTarget name="FrontID" size="5.000000 3.749026" />
+    <ImageTarget name="Wallet" size="5.000000 3.749026" />
+    <ImageTarget name="z6497417095634_34644ee19dea21ca7e893c6ddeea5ff4" size="5.000000 6.666667" />
+  </Tracking>
+</QCARConfig>

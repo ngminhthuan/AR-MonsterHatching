@@ -64,7 +64,7 @@ public class PlayerManager : MonoBehaviour
 
     public void LoadPlayerData()
     {
-        Debug.Log(_currentPlayerTarget.ImageTargetType.ToString());
+
     }
 }
 
